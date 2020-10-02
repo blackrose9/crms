@@ -18,5 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+//Create
+Route::post('/course', [App\Http\Controllers\CoursesController::class, 'store']);
 
+//Read
+Route::get('/course/create', [App\Http\Controllers\CoursesController::class, 'create']);
+
+//Update
+//Create
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
