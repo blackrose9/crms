@@ -74,21 +74,21 @@
         <tr>
             <th scope="col">Unique Code</th>
             <th scope="col">Course Name</th>
-            <th scope="col">Teacher Name</th>
+            <th scope="col">Teachername</th>
             <th scope="col">Hours</th>
             <th scope="col">Select</th>
         </tr>
         </thead>
         <tbody>
-{{--        @foreach($user->courses as $course)--}}
-{{--        <tr>--}}
-{{--            <th scope="row">{{$user->course->id}}</th>--}}
-{{--            <td>{{$user->course->coursename}}</td>--}}
-{{--            <td>{{$user->course->teachername}}</td>--}}
-{{--            <td>{{$user->course->hours}}</td>--}}
-{{--            <td><button class="btn btn-primary">Select</button> </td>--}}
-{{--        </tr>--}}
-{{--        @endforeach--}}
+        @foreach($course as $course)
+            <tr>
+                <th scope="row">{{$course ->id}}</th>
+                <td>{{$course->coursename}}</td>
+                <td>{{$course->teachername}}</td>
+                <td>{{$course->hours}}</td>
+                <td><a href="/course/{{$course->id}}" class="btn btn-primary">Select</a> </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
