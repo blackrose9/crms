@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 //Create
+Route::get('/course/create', [App\Http\Controllers\CoursesController::class, 'create']);
 Route::post('/course', [App\Http\Controllers\CoursesController::class, 'store']);
 
 //Read
-Route::get('/course/create', [App\Http\Controllers\CoursesController::class, 'create']);
 
 //Update
 //Create

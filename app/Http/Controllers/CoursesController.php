@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CoursesController extends Controller
@@ -12,9 +13,14 @@ class CoursesController extends Controller
         $this->middleware('auth');
     }
 
-    public function create () {
-        return view('courses/create');
+    public function create (Course $course) {
+        $course = Course::all();
+        return view('courses/create', [
+            'course' => $course,
+        ]);
+
     }
+
 
     public function store () {
         $data = \request() -> validate([
