@@ -23,7 +23,9 @@ Route::get('/course/create', [App\Http\Controllers\CoursesController::class, 'cr
 Route::post('/course', [App\Http\Controllers\CoursesController::class, 'store']);
 
 //Read
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Update
-//Create
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/course/{course}', [App\Http\Controllers\CoursesController::class, 'edit']);
+
+//Delete

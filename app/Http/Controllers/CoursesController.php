@@ -21,7 +21,6 @@ class CoursesController extends Controller
 
     }
 
-
     public function store () {
         $data = \request() -> validate([
            'coursename' => 'required',

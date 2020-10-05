@@ -5,7 +5,7 @@
     <form action="/course" enctype="multipart/form-data" method="post" class="pb-4">
         @csrf
         <div class="row">
-            <div class="col-8 offset-2 border pl-5 pr-5 pt-3 pb-3">
+            <div class="col-12 border pl-5 pr-5 pt-3 pb-3">
                 <div class="row">
                     <h1>Register Course</h1>
                 </div>
@@ -74,7 +74,7 @@
         <tr>
             <th scope="col">Unique Code</th>
             <th scope="col">Course Name</th>
-            <th scope="col">Teachername</th>
+            <th scope="col">Teacher Name</th>
             <th scope="col">Hours</th>
             <th scope="col">Select</th>
         </tr>
